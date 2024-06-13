@@ -371,8 +371,15 @@
                 </div>
                 <div class="list-recent-jobs list-job-2-col">
                     <div class="row">
+
+
+                        <?php 
+                         if(have_posts()){
+                            while(have_posts()){
+                                the_post();
+
+                                ?>
                         <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                            <!-- Item job -->
                             <div class="card-job hover-up wow animate__animated animate__fadeInUp">
                                 <div class="card-job-top">
                                     <div class="card-job-top--image">
@@ -381,18 +388,19 @@
                                         </a>
                                     </div>
                                     <div class="card-job-top--info">
-                                        <h6 class="card-job-top--info-heading"><a href="job-single.html">Digital
-                                                Marketing Manager</a></h6>
+                                        <h6 class="card-job-top--info-heading"><a href="job-single.html">
+                                                <?php the_title()?> </a></h6>
                                         <div class="row">
                                             <div class="col-md-9">
-                                                <a href="employers-list.html"><span
-                                                        class="card-job-top--company">AliStudio, Inc</span></a>
+                                                <a href="#"><span class="card-job-top--company"> <?php the_author() ?>
+                                                    </span></a>
                                                 <span class="card-job-top--location text-sm"><i
-                                                        class="fi-rr-marker"></i> New York, NY</span>
+                                                        class="fi-rr-marker"></i>
+                                                    New York, NY</span>
                                                 <span class="card-job-top--type-job text-sm"><i
                                                         class="fi-rr-briefcase"></i>Full time</span>
                                                 <span class="card-job-top--post-time text-sm"><i
-                                                        class="fi-rr-clock"></i> 3 mins ago</span>
+                                                        class="fi-rr-clock"></i> <?php the_time('g:i a') ?> </span>
                                             </div>
                                             <div class="col-md-3 text-md-end text-start">
                                                 <span class="card-job-top--price">$500<span>/Hour</span></span>
@@ -401,19 +409,15 @@
                                     </div>
                                 </div>
                                 <div class="card-job-description mt-20">
-                                    We want someone who has been doing this for a solid 2-3 years. We want someone who
-                                    can
-                                    demonstrate an extremely strong portfolio.
+                                    <?php the_content() ?>
                                 </div>
                                 <div class="card-job-bottom mt-25">
                                     <div class="row">
                                         <div class="col-lg-9 col-sm-8 col-12">
                                             <a href="job-grid.html"
-                                                class="btn btn-small background-urgent btn-pink mr-5">Urgent</a>
-                                            <a href="job-grid-2.html"
-                                                class="btn btn-small background-blue-light mr-5">Senior</a>
-                                            <a href="job-grid.html" class="btn btn-small background-6 disc-btn">Full
-                                                time</a>
+                                                class="btn btn-small background-urgent btn-pink mr-5"><?php the_tags()?></a>
+
+
                                         </div>
                                         <div class="col-lg-3 col-sm-4 col-12 text-end pt-5 pt-sm-15">
                                             <a href="#" class="text-lg color-muted"><i
@@ -424,290 +428,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- End item job -->
                         </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                            <!-- Item job -->
-                            <div class="card-job hover-up wow animate__animated animate__fadeInUp">
-                                <div class="card-job-top">
-                                    <div class="card-job-top--image">
-                                        <a href="employers-single.html">
-                                            <figure><img alt="jobhub" src="assets/imgs/page/job/n-digital.png" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="card-job-top--info">
-                                        <h6 class="card-job-top--info-heading"><a href="job-single.html">Development
-                                                Team Lead</a></h6>
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <a href="employers-list.html"><span
-                                                        class="card-job-top--company">AliStudio, Inc</span></a>
-                                                <span class="card-job-top--location text-sm"><i
-                                                        class="fi-rr-marker"></i> New York, NY</span>
-                                                <span class="card-job-top--type-job text-sm"><i
-                                                        class="fi-rr-briefcase"></i>Full time</span>
-                                                <span class="card-job-top--post-time text-sm"><i
-                                                        class="fi-rr-clock"></i> 3 mins ago</span>
-                                            </div>
-                                            <div class="col-md-3 text-md-end text-start">
-                                                <span class="card-job-top--price">$500<span>/Hour</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-job-description mt-20">
-                                    We want someone who has been doing this for a solid 2-3 years. We want someone who
-                                    can
-                                    demonstrate an extremely strong portfolio.
-                                </div>
-                                <div class="card-job-bottom mt-25">
-                                    <div class="row">
-                                        <div class="col-lg-9 col-sm-8 col-12">
-                                            <a href="job-grid.html"
-                                                class="btn btn-small background-urgent btn-pink mr-5">Urgent</a>
-                                            <a href="job-grid-2.html"
-                                                class="btn btn-small background-blue-light mr-5">Senior</a>
-                                            <a href="job-grid.html" class="btn btn-small background-6 disc-btn">Full
-                                                time</a>
-                                        </div>
-                                        <div class="col-lg-3 col-sm-4 col-12 text-end pt-5 pt-sm-15">
-                                            <a href="#" class="text-lg color-muted"><i
-                                                    class="fi-rr-shield-check"></i></a>
-                                            <a href="#" class="ml-5 text-lg color-muted"><i
-                                                    class="fi-rr-bookmark"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End item job -->
-                        </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                            <!-- Item job -->
-                            <div class="card-job hover-up wow animate__animated animate__fadeInUp">
-                                <div class="card-job-top">
-                                    <div class="card-job-top--image">
-                                        <a href="employers-single.html">
-                                            <figure><img alt="jobhub" src="assets/imgs/page/job/n-digital2.png" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="card-job-top--info">
-                                        <h6 class="card-job-top--info-heading"><a href="job-single.html">Hiring Online
-                                                English Teachers</a>
-                                        </h6>
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <a href="employers-list.html"><span
-                                                        class="card-job-top--company">AliStudio, Inc</span></a>
-                                                <span class="card-job-top--location text-sm"><i
-                                                        class="fi-rr-marker"></i> New York, NY</span>
-                                                <span class="card-job-top--type-job text-sm"><i
-                                                        class="fi-rr-briefcase"></i>Full time</span>
-                                                <span class="card-job-top--post-time text-sm"><i
-                                                        class="fi-rr-clock"></i> 3 mins ago</span>
-                                            </div>
-                                            <div class="col-md-3 text-md-end text-start">
-                                                <span class="card-job-top--price">$500<span>/Hour</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-job-description mt-20">
-                                    We want someone who has been doing this for a solid 2-3 years. We want someone who
-                                    can
-                                    demonstrate an extremely strong portfolio.
-                                </div>
-                                <div class="card-job-bottom mt-25">
-                                    <div class="row">
-                                        <div class="col-lg-9 col-sm-8 col-12">
-                                            <a href="job-grid.html"
-                                                class="btn btn-small background-urgent btn-pink mr-5">Urgent</a>
-                                            <a href="job-grid-2.html"
-                                                class="btn btn-small background-blue-light mr-5">Senior</a>
-                                            <a href="job-grid.html" class="btn btn-small background-6 disc-btn">Full
-                                                time</a>
-                                        </div>
-                                        <div class="col-lg-3 col-sm-4 col-12 text-end pt-5 pt-sm-15">
-                                            <a href="#" class="text-lg color-muted"><i
-                                                    class="fi-rr-shield-check"></i></a>
-                                            <a href="#" class="ml-5 text-lg color-muted"><i
-                                                    class="fi-rr-bookmark"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End item job -->
-                        </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                            <!-- Item job -->
-                            <div class="card-job hover-u wow animate__animated animate__fadeInUp">
-                                <div class="card-job-top">
-                                    <div class="card-job-top--image">
-                                        <a href="employers-single.html">
-                                            <figure><img alt="jobhub" src="assets/imgs/page/job/digital.png" /></figure>
-                                        </a>
-                                    </div>
-                                    <div class="card-job-top--info">
-                                        <h6 class="card-job-top--info-heading"><a href="job-single.html">Development
-                                                Team Lead</a></h6>
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <a href="employers-list.html"><span
-                                                        class="card-job-top--company">AliStudio, Inc</span></a>
-                                                <span class="card-job-top--location text-sm"><i
-                                                        class="fi-rr-marker"></i> New York, NY</span>
-                                                <span class="card-job-top--type-job text-sm"><i
-                                                        class="fi-rr-briefcase"></i>Full time</span>
-                                                <span class="card-job-top--post-time text-sm"><i
-                                                        class="fi-rr-clock"></i> 3 mins ago</span>
-                                            </div>
-                                            <div class="col-md-3 text-md-end text-start">
-                                                <span class="card-job-top--price">$500<span>/Hour</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-job-description mt-20">
-                                    We want someone who has been doing this for a solid 2-3 years. We want someone who
-                                    can
-                                    demonstrate an extremely strong portfolio.
-                                </div>
-                                <div class="card-job-bottom mt-25">
-                                    <div class="row">
-                                        <div class="col-lg-9 col-sm-8 col-12">
-                                            <a href="job-grid.html"
-                                                class="btn btn-small background-urgent btn-pink mr-5">Urgent</a>
-                                            <a href="job-grid-2.html"
-                                                class="btn btn-small background-blue-light mr-5">Senior</a>
-                                            <a href="job-grid.html" class="btn btn-small background-6 disc-btn">Full
-                                                time</a>
-                                        </div>
-                                        <div class="col-lg-3 col-sm-4 col-12 text-end pt-5 pt-sm-15">
-                                            <a href="#" class="text-lg color-muted"><i
-                                                    class="fi-rr-shield-check"></i></a>
-                                            <a href="#" class="ml-5 text-lg color-muted"><i
-                                                    class="fi-rr-bookmark"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End item job -->
-                        </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                            <!-- Item job -->
-                            <div class="card-job hover-up wow animate__animated animate__fadeInUp">
-                                <div class="card-job-top">
-                                    <div class="card-job-top--image">
-                                        <a href="employers-single.html">
-                                            <figure><img alt="jobhub" src="assets/imgs/page/job/n-digital.png" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="card-job-top--info">
-                                        <h6 class="card-job-top--info-heading"><a href="job-single.html">Hiring Online
-                                                Chiness Teachers</a>
-                                        </h6>
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <a href="employers-list.html"><span
-                                                        class="card-job-top--company">AliStudio, Inc</span></a>
-                                                <span class="card-job-top--location text-sm"><i
-                                                        class="fi-rr-marker"></i> New York, NY</span>
-                                                <span class="card-job-top--type-job text-sm"><i
-                                                        class="fi-rr-briefcase"></i>Full time</span>
-                                                <span class="card-job-top--post-time text-sm"><i
-                                                        class="fi-rr-clock"></i> 3 mins ago</span>
-                                            </div>
-                                            <div class="col-md-3 text-md-end text-start">
-                                                <span class="card-job-top--price">$500<span>/Hour</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-job-description mt-20">
-                                    We want someone who has been doing this for a solid 2-3 years. We want someone who
-                                    can
-                                    demonstrate an extremely strong portfolio.
-                                </div>
-                                <div class="card-job-bottom mt-25">
-                                    <div class="row">
-                                        <div class="col-lg-9 col-sm-8 col-12">
-                                            <a href="job-grid.html"
-                                                class="btn btn-small background-urgent btn-pink mr-5">Urgent</a>
-                                            <a href="job-grid-2.html"
-                                                class="btn btn-small background-blue-light mr-5">Senior</a>
-                                            <a href="job-grid.html" class="btn btn-small background-6 disc-btn">Full
-                                                time</a>
-                                        </div>
-                                        <div class="col-lg-3 col-sm-4 col-12 text-end pt-5 pt-sm-15">
-                                            <a href="#" class="text-lg color-muted"><i
-                                                    class="fi-rr-shield-check"></i></a>
-                                            <a href="#" class="ml-5 text-lg color-muted"><i
-                                                    class="fi-rr-bookmark"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End item job -->
-                        </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                            <!-- Item job -->
-                            <div class="card-job hover-up wow animate__animated animate__fadeInUp">
-                                <div class="card-job-top">
-                                    <div class="card-job-top--image">
-                                        <a href="employers-single.html">
-                                            <figure><img alt="jobhub" src="assets/imgs/page/job/n-digital2.png" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="card-job-top--info">
-                                        <h6 class="card-job-top--info-heading"><a href="job-single.html">Digital
-                                                Experience Designer</a>
-                                        </h6>
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <a href="employers-list.html"><span
-                                                        class="card-job-top--company">AliStudio, Inc</span></a>
-                                                <span class="card-job-top--location text-sm"><i
-                                                        class="fi-rr-marker"></i> New York, NY</span>
-                                                <span class="card-job-top--type-job text-sm"><i
-                                                        class="fi-rr-briefcase"></i>Full time</span>
-                                                <span class="card-job-top--post-time text-sm"><i
-                                                        class="fi-rr-clock"></i> 3 mins ago</span>
-                                            </div>
-                                            <div class="col-md-3 text-md-end text-start">
-                                                <span class="card-job-top--price">$500<span>/Hour</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-job-description mt-20">
-                                    We want someone who has been doing this for a solid 2-3 years. We want someone who
-                                    can
-                                    demonstrate an extremely strong portfolio. Create deliverables for your product
-                                </div>
-                                <div class="card-job-bottom mt-25">
-                                    <div class="row">
-                                        <div class="col-lg-9 col-sm-8 col-12">
-                                            <a href="job-grid.html"
-                                                class="btn btn-small background-urgent btn-pink mr-5">Urgent</a>
-                                            <a href="job-grid-2.html"
-                                                class="btn btn-small background-blue-light mr-5">Senior</a>
-                                            <a href="job-grid.html" class="btn btn-small background-6 disc-btn">Full
-                                                time</a>
-                                        </div>
-                                        <div class="col-lg-3 col-sm-4 col-12 text-end pt-5 pt-sm-15">
-                                            <a href="#" class="text-lg color-muted"><i
-                                                    class="fi-rr-shield-check"></i></a>
-                                            <a href="#" class="ml-5 text-lg color-muted"><i
-                                                    class="fi-rr-bookmark"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End item job -->
-                        </div>
+
+                        <?php
+                            }
+                         }
+                         ?>
+
+                        <!-- Item job -->
+
+                        <!-- End item job -->
+
+
                     </div>
                 </div>
             </div>
